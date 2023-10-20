@@ -24,7 +24,7 @@ label {
     font-weight: bold;
 }
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="number"] {
+input[type="text"], input[type="email"], input[type="tel"], input[type="radio"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
