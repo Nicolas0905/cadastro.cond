@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Cadastro de Condomínio</title>
 </head>
 <body>
     <div class="container">
         <h1>Cadastro de Condomínio</h1>
-        <form>
+        <form id="cadastro-form">
             <div class="form-group">
-                <label for="unidade_proprietario">Unidade (Proprietário):</label>
-                <input type="text" id="unidade_proprietario" name="unidade_proprietario" placeholder="Digite a unidade do proprietário">
+                <label for="tipo_unidade">Inquilino</label>
+                <input type="radio" id="proprietario" name="tipo_unidade" value="proprietario">
+                <label for="proprietario">Proprietário</label>
+                <input type="radio" id="inquilino" name="tipo_unidade" value="inquilino">
+                <label for="inquilino"></label>
             </div>
             <div class="form-group">
-                <label for="unidade_inquilino">Unidade (Inquilino):</label>
-                <input type="text" id="unidade_inquilino" name="unidade_inquilino" placeholder="Digite a unidade do inquilino">
+                <label for="unidade">Unidade:</label>
+                <input type="text" id="unidade" name="unidade" placeholder="Digite a unidade">
             </div>
             <div class="form-group">
                 <label for="nome_completo">Nome Completo:</label>
@@ -53,8 +57,10 @@
                 <label for="animais">Animais de estimação:</label>
                 <input type="text" id="animais" name="animais" placeholder="Nome, gato/cachorro, raça e cor">
             </div>
-            <button type="submit">Cadastrar</button>
+            <button type="button" id="cadastrar-button">Cadastrar</button>
         </form>
     </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
