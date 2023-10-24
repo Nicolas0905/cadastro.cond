@@ -15,18 +15,27 @@ document.addEventListener("DOMContentLoaded", function() {
         const veiculos = document.getElementById("veiculos").value;
         const animais = document.getElementById("animais").value;
 
-        console.log("Tipo de Unidade:", tipoUnidade);
-        console.log("Unidade:", unidade);
-        console.log("Nome Completo:", nomeCompleto);
-        console.log("RG:", rg);
-        console.log("Celular:", celular);
-        console.log("Email:", email);
-        console.log("Em caso de emergência procurar por:", emergencia);
-        console.log("Em caso de locatário, informar nome do proprietário e telefone:", locatario);
-        console.log("Demais moradores da unidade:", moradores);
-        console.log("Veículos da unidade:", veiculos);
-        console.log("Animais de estimação:", animais);
+        // Criar um objeto com os dados
+        const dados = {
+            tipoUnidade: tipoUnidade,
+            unidade: unidade,
+            nomeCompleto: nomeCompleto,
+            rg: rg,
+            celular: celular,
+            email: email,
+            emergencia: emergencia,
+            locatario: locatario,
+            moradores: moradores,
+            veiculos: veiculos,
+            animais: animais
+        };
 
-        alert("Dados cadastrados. Verifique o console para mais informações.");
+        // Converter o objeto em uma string JSON
+        const dadosJSON = JSON.stringify(dados);
+
+        // Enviar os dados para o Console do Inspetor do Google Chrome
+        console.log(dadosJSON);
+
+        alert("Dados cadastrados. Verifique o console do Inspetor do Google Chrome para mais informações.");
     });
 });
